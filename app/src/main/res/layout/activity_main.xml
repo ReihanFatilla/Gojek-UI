@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:paddingHorizontal="16dp">
+    android:paddingHorizontal="16dp"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/card_backround"
@@ -14,67 +15,67 @@
         android:layout_marginBottom="24dp"
         android:background="@color/darker_white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="48dp"
         android:layout_height="3dp"
-        app:layout_constraintTop_toTopOf="@id/card_backround"
+        android:background="@color/gray"
         app:layout_constraintBottom_toTopOf="@id/card_backround"
-        app:layout_constraintStart_toStartOf="@id/card_backround"
         app:layout_constraintEnd_toEndOf="@id/card_backround"
-        android:background="@color/gray"/>
+        app:layout_constraintStart_toStartOf="@id/card_backround"
+        app:layout_constraintTop_toTopOf="@id/card_backround" />
 
     <ImageView
         android:id="@+id/ic_gocar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/card_backround"
+        android:src="@drawable/ic_gocar"
         app:layout_constraintBottom_toBottomOf="@id/card_backround"
-        android:src="@drawable/ic_gocar" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/card_backround" />
 
     <ImageView
         android:id="@+id/ic_gofood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        app:layout_constraintTop_toTopOf="@id/card_backround"
+        android:src="@drawable/ic_gofood"
         app:layout_constraintBottom_toBottomOf="@id/card_backround"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_gofood" />
+        app:layout_constraintTop_toTopOf="@id/card_backround" />
 
     <ImageView
         android:id="@+id/ic_goride"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="34dp"
-        app:layout_constraintEnd_toStartOf="@id/ic_gofood"
-        app:layout_constraintTop_toTopOf="@id/card_backround"
+        android:src="@drawable/ic_goride"
         app:layout_constraintBottom_toBottomOf="@id/card_backround"
-        android:src="@drawable/ic_goride" />
+        app:layout_constraintEnd_toStartOf="@id/ic_gofood"
+        app:layout_constraintTop_toTopOf="@id/card_backround" />
 
     <ImageView
         android:id="@+id/ic_gomart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
-        app:layout_constraintStart_toEndOf="@id/ic_gocar"
-        app:layout_constraintTop_toTopOf="@id/card_backround"
+        android:src="@drawable/ic_gomart"
         app:layout_constraintBottom_toBottomOf="@id/card_backround"
-        android:src="@drawable/ic_gomart" />
+        app:layout_constraintStart_toEndOf="@id/ic_gocar"
+        app:layout_constraintTop_toTopOf="@id/card_backround" />
 
     <ImageView
         android:id="@+id/ic_gopulsa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/ic_gomart"
-        app:layout_constraintEnd_toStartOf="@id/ic_goride"
-        app:layout_constraintTop_toTopOf="@id/card_backround"
+        android:src="@drawable/ic_gopulsa"
         app:layout_constraintBottom_toBottomOf="@id/card_backround"
-        android:src="@drawable/ic_gopulsa" />
+        app:layout_constraintEnd_toStartOf="@id/ic_goride"
+        app:layout_constraintStart_toEndOf="@id/ic_gomart"
+        app:layout_constraintTop_toTopOf="@id/card_backround" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
