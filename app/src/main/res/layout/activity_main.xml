@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:paddingHorizontal="16dp"
     app:layoutDescription="@xml/activity_main_scene"
+    android:clipToPadding="false"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
@@ -13,11 +14,11 @@
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:layout_marginBottom="24dp"
-        android:fitsSystemWindows="true"
         android:background="@drawable/bg_card_radius"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:fitsSystemWindows="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
@@ -79,5 +80,35 @@
         app:layout_constraintEnd_toStartOf="@id/ic_goride"
         app:layout_constraintStart_toEndOf="@id/ic_gomart"
         app:layout_constraintTop_toTopOf="@id/card_backround" />
+
+<!--    Expanded    -->
+
+    <TextView
+        android:id="@+id/tv_jasa_favorit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:alpha="0"
+        android:text="Jasa Favorit"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/card_backround"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_gocar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="GoCar"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_marginTop="6dp"-->
+<!--        android:textSize="14dp"-->
+<!--        android:textStyle="normal"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ic_gocar"-->
+<!--        app:layout_constraintStart_toStartOf="@id/ic_gocar"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/ic_gocar"-->
+<!--        />-->
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

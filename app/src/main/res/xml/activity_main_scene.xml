@@ -4,16 +4,112 @@
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        motion:constraintSetEnd="@+id/end"
-        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@+id/menuExpanded"
+        motion:constraintSetStart="@id/menuCollapsed"
         motion:duration="1000">
        <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/ic_gocar"
+               motion:framePosition="90"
+               android:alpha="1" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ic_gomart"
+               motion:framePosition="90"
+               android:alpha="1" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ic_gomart"
+               motion:framePosition="95"
+               android:alpha="1" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ic_goride"
+               motion:framePosition="95"
+               android:alpha="1" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ic_gofood"
+               motion:framePosition="90"
+               android:alpha="1" />
        </KeyFrameSet>
+        <OnSwipe
+            motion:touchAnchorId="@+id/card_backround"
+            motion:dragDirection="dragUp"
+            motion:touchAnchorSide="top" />
     </Transition>
 
-    <ConstraintSet android:id="@+id/start">
+    <ConstraintSet android:id="@+id/menuCollapsed">
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/end">
+    <ConstraintSet android:id="@+id/menuExpanded">
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="-16dp"
+            android:layout_marginEnd="-16dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="32dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/card_backround"
+            motion:layout_constraintTop_toTopOf="parent"
+            >
+            <CustomAttribute
+                motion:attributeName="Round"
+                motion:customDimension="50dp" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tv_jasa_favorit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            motion:layout_constraintTop_toTopOf="@id/card_backround"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            motion:transitionEasing="accelerate"
+            motion:pathMotionArc="flip" />
+        <Constraint
+            android:id="@+id/ic_gocar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/tv_jasa_favorit"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:id="@+id/ic_gomart"
+            motion:layout_constraintStart_toEndOf="@id/ic_gocar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            motion:layout_constraintTop_toTopOf="@id/ic_gocar"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_gocar"
+            />
+        <Constraint
+            android:id="@+id/ic_gopulsa"
+            motion:layout_constraintEnd_toStartOf="@id/ic_goride"
+            motion:layout_constraintStart_toEndOf="@id/ic_gomart"
+            motion:layout_constraintTop_toTopOf="@id/ic_gocar"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_gocar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Constraint
+            android:id="@+id/ic_goride"
+            motion:layout_constraintEnd_toStartOf="@id/ic_gofood"
+
+            motion:layout_constraintTop_toTopOf="@id/ic_gocar"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_gocar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="34dp" />
+        <Constraint
+            android:id="@+id/ic_gofood"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/ic_gocar"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_gocar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp" />
+
+
     </ConstraintSet>
 </MotionScene>
