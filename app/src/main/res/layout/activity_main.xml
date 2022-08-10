@@ -13,7 +13,8 @@
         android:id="@+id/card_background"
         android:layout_width="0dp"
         android:layout_height="115dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="@color/darker_white"
         android:translationZ="-2dp"
         app:cardCornerRadius="25dp"
@@ -36,7 +37,7 @@
         android:id="@+id/ic_gocar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="52dp"
         android:src="@drawable/ic_gocar"
         app:layout_constraintBottom_toBottomOf="@id/card_background"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +47,7 @@
         android:id="@+id/ic_gofood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="52dp"
         android:src="@drawable/ic_gofood"
         app:layout_constraintBottom_toBottomOf="@id/card_background"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,11 +57,12 @@
         android:id="@+id/ic_goride"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
         android:src="@drawable/ic_goride"
         app:layout_constraintBottom_toBottomOf="@id/card_background"
         app:layout_constraintEnd_toStartOf="@id/ic_gofood"
-        app:layout_constraintTop_toTopOf="@id/card_background" />
+        app:layout_constraintStart_toEndOf="@id/ic_gomart"
+        app:layout_constraintTop_toTopOf="@id/card_background"
+        />
 
     <ImageView
         android:id="@+id/ic_gomart"
@@ -70,6 +72,7 @@
         android:src="@drawable/ic_gomart"
         app:layout_constraintBottom_toBottomOf="@id/card_background"
         app:layout_constraintStart_toEndOf="@id/ic_gocar"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintTop_toTopOf="@id/card_background" />
 
     <ImageView
@@ -77,10 +80,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_gopulsa"
+        android:alpha="0"
         app:layout_constraintBottom_toBottomOf="@id/card_background"
         app:layout_constraintEnd_toStartOf="@id/ic_goride"
         app:layout_constraintStart_toEndOf="@id/ic_gomart"
         app:layout_constraintTop_toTopOf="@id/card_background" />
+
+    <View
+        android:id="@+id/guideline"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/card_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 <!--    Expanded    -->
 
@@ -93,8 +106,10 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/card_background"
-        app:layout_constraintStart_toStartOf="@id/ic_gocar" />
+        app:layout_constraintTop_toTopOf="@id/card_background"
+        android:layout_marginTop="42dp"
+        app:layout_constraintStart_toStartOf="@id/ic_gocar"
+        />
 
     <TextView
         android:id="@+id/tv_selengkapnya"
@@ -105,9 +120,9 @@
         android:textColor="@color/gray"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/card_background"
-        app:layout_constraintEnd_toEndOf="@id/ic_gofood"
-        />
+        app:layout_constraintTop_toTopOf="@id/tv_jasa_favorit"
+        app:layout_constraintBottom_toBottomOf="@id/tv_jasa_favorit"
+        app:layout_constraintEnd_toEndOf="@id/ic_gofood" />
 
     <TextView
         android:id="@+id/tv_gocar"
@@ -141,6 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GoPulsa"
+        android:alpha="0"
         android:textColor="@color/black"
         android:layout_marginTop="8dp"
         android:textSize="14dp"

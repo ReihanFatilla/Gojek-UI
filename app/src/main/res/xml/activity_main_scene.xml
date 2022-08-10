@@ -8,26 +8,6 @@
         motion:constraintSetStart="@id/menuCollapsed"
         motion:duration="1000">
        <KeyFrameSet>
-           <KeyAttribute
-               motion:motionTarget="@+id/ic_gocar"
-               motion:framePosition="90"
-               android:alpha="1" />
-           <KeyAttribute
-               motion:motionTarget="@+id/ic_gomart"
-               motion:framePosition="90"
-               android:alpha="1" />
-           <KeyAttribute
-               motion:motionTarget="@+id/ic_gomart"
-               motion:framePosition="95"
-               android:alpha="1" />
-           <KeyAttribute
-               motion:motionTarget="@+id/ic_goride"
-               motion:framePosition="95"
-               android:alpha="1" />
-           <KeyAttribute
-               motion:motionTarget="@+id/ic_gofood"
-               motion:framePosition="90"
-               android:alpha="1" />
        </KeyFrameSet>
         <OnSwipe
             motion:touchAnchorId="@+id/card_background"
@@ -61,7 +41,7 @@
             motion:layout_constraintTop_toTopOf="@id/card_background"
             motion:layout_constraintStart_toStartOf="@id/ic_gocar"
             android:layout_marginTop="42dp"
-            motion:transitionEasing="accelerate"
+            motion:transitionEasing="linear"
             motion:pathMotionArc="none" />
         <Constraint
             android:id="@+id/ic_gocar"
@@ -129,6 +109,15 @@
             android:alpha="1"
             motion:layout_constraintTop_toTopOf="@id/tv_jasa_favorit"
             motion:layout_constraintBottom_toBottomOf="@id/tv_jasa_favorit" />
+        <Constraint
+            android:id="@+id/tv_gopulsa"
+            motion:layout_constraintEnd_toEndOf="@id/ic_gopulsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/ic_gopulsa"
+            android:alpha="1"
+            motion:layout_constraintStart_toStartOf="@id/ic_gopulsa"
+            android:layout_marginTop="8dp" />
 
 
     </ConstraintSet>
