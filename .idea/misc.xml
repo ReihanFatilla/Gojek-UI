@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/bg_card_line.xml" value="0.245" />
         <entry key="app/src/main/res/drawable/bg_card_radius.xml" value="0.2145" />
+        <entry key="app/src/main/res/drawable/bg_card_shadow.xml" value="0.245" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.20883534136546184" />
       </map>
     </option>
