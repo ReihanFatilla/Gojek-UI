@@ -14,7 +14,7 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/bg_card_shadow"
+        android:background="@color/darker_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -194,8 +194,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:alpha="0"
-        android:scaleX="0.5"
-        android:scaleY="0.5"
         android:text="Layanan Lainnya"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -209,13 +207,111 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:alpha="0"
-        android:scaleX="0.5"
-        android:scaleY="0.5"
         android:text="Food Delivery &amp; Shopping"
         android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="@id/tv_favorit"
         app:layout_constraintTop_toBottomOf="@id/tv_layanan_lainnya" />
+
+    <ImageView
+        android:id="@+id/ic_gofood_2nd"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:alpha="0"
+        android:src="@drawable/ic_gocar"
+        app:layout_constraintStart_toStartOf="@id/tv_food_delivery_and_shopping"
+        app:layout_constraintTop_toBottomOf="@id/tv_food_delivery_and_shopping" />
+
+    <ImageView
+        android:id="@+id/ic_goshop"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:alpha="0"
+        android:src="@drawable/ic_gofood"
+        app:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
+        app:layout_constraintEnd_toEndOf="@id/ic_gofood"
+        app:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
+
+    <ImageView
+        android:id="@+id/ic_gomart_2nd"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="0"
+        android:src="@drawable/ic_goride"
+        app:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
+        app:layout_constraintEnd_toStartOf="@id/ic_gofood"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
+
+    <ImageView
+        android:id="@+id/ic_gomall"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:alpha="0"
+        android:src="@drawable/ic_gomart"
+        app:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toEndOf="@id/ic_gocar"
+        app:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
+
+    <TextView
+        android:id="@+id/tv_gofood_2nd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:text="GoFood"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@id/ic_gofood_2nd"
+        app:layout_constraintStart_toStartOf="@id/ic_gofood_2nd"
+        app:layout_constraintTop_toBottomOf="@id/ic_gofood_2nd" />
+
+    <TextView
+        android:id="@+id/tv_gomall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:text="GoMall"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@id/ic_gomall"
+        app:layout_constraintStart_toStartOf="@id/ic_gomall"
+        app:layout_constraintTop_toBottomOf="@id/ic_gomall" />
+
+    <TextView
+        android:id="@+id/tv_gomart_2nd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:text="GoMart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@id/ic_gomart_2nd"
+        app:layout_constraintStart_toStartOf="@id/ic_gomart_2nd"
+        app:layout_constraintTop_toBottomOf="@id/ic_gomart_2nd" />
+
+    <TextView
+        android:id="@+id/tv_goshop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:text="GoShop"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@id/ic_goshop"
+        app:layout_constraintStart_toStartOf="@id/ic_goshop"
+        app:layout_constraintTop_toBottomOf="@id/ic_goshop" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

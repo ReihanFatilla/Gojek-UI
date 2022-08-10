@@ -47,7 +47,9 @@
             motion:layout_constraintStart_toStartOf="parent"
             android:id="@+id/card_background"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:transitionEasing="cubic(0,0.65,0.2,1)">
+            motion:transitionEasing="cubic(0,0.65,0.2,1)"
+            motion:layout_constraintHorizontal_bias="0.484"
+            motion:layout_constraintVertical_bias="0.0">
             <CustomAttribute
                 motion:attributeName="Round"
                 motion:customDimension="20dp" />
@@ -153,6 +155,78 @@
             android:alpha="1"
             motion:layout_constraintStart_toStartOf="@id/tv_favorit"
             android:layout_marginTop="12dp" />
+        <Constraint
+            android:id="@+id/ic_goshop"
+            motion:layout_constraintEnd_toEndOf="@id/ic_gofood"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
+            android:alpha="1"
+            motion:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
+        <Constraint
+            android:id="@+id/tv_goshop"
+            motion:layout_constraintEnd_toEndOf="@id/ic_goshop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/ic_goshop"
+            android:alpha="1"
+            motion:layout_constraintStart_toStartOf="@id/ic_goshop"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/ic_gomart_2nd"
+            motion:layout_constraintEnd_toStartOf="@id/ic_gofood"
+            motion:layout_constraintStart_toEndOf="@id/guideline"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
+            android:layout_marginEnd="16dp"
+            android:alpha="1"
+            motion:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
+        <Constraint
+            android:id="@+id/tv_gomart_2nd"
+            motion:layout_constraintEnd_toEndOf="@id/ic_gomart_2nd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/ic_gomart_2nd"
+            android:alpha="1"
+            motion:layout_constraintStart_toStartOf="@id/ic_gomart_2nd"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/ic_gomall"
+            motion:layout_constraintEnd_toStartOf="@id/guideline"
+            motion:layout_constraintStart_toEndOf="@id/ic_gocar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
+            android:alpha="1"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
+        <Constraint
+            android:id="@+id/tv_gomall"
+            motion:layout_constraintEnd_toEndOf="@id/ic_gomall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/ic_gomall"
+            android:alpha="1"
+            motion:layout_constraintStart_toStartOf="@id/ic_gomall"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/ic_gofood_2nd"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            motion:layout_constraintTop_toBottomOf="@id/tv_food_delivery_and_shopping"
+            android:alpha="1"
+            motion:layout_constraintStart_toStartOf="@id/tv_food_delivery_and_shopping"
+            android:layout_marginTop="32dp" />
+        <Constraint
+            android:id="@+id/tv_gofood_2nd"
+            motion:layout_constraintEnd_toEndOf="@id/ic_gofood_2nd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/ic_gofood_2nd"
+            android:alpha="1"
+            motion:layout_constraintStart_toStartOf="@id/ic_gofood_2nd"
+            android:layout_marginTop="8dp" />
 
 
     </ConstraintSet>
