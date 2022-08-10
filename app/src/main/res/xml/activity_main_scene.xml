@@ -6,7 +6,8 @@
     <Transition
         motion:constraintSetEnd="@+id/menuExpanded"
         motion:constraintSetStart="@id/menuCollapsed"
-        motion:duration="1000">
+        motion:duration="1000"
+        motion:motionInterpolator="anticipate">
        <KeyFrameSet>
        </KeyFrameSet>
         <OnSwipe
