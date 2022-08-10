@@ -9,15 +9,13 @@
     android:clipToPadding="false"
     tools:context=".MainActivity">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/card_background"
         android:layout_width="0dp"
-        android:layout_height="115dp"
-        android:layout_marginHorizontal="8dp"
+        android:layout_height="75dp"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/darker_white"
-        android:translationZ="-2dp"
-        app:cardCornerRadius="25dp"
+        android:background="@color/darker_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -26,7 +24,6 @@
         android:id="@+id/view"
         android:layout_width="38dp"
         android:layout_height="5dp"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/bg_card_line"
         app:layout_constraintBottom_toTopOf="@id/ic_gocar"
         app:layout_constraintEnd_toEndOf="@id/card_background"
@@ -35,9 +32,10 @@
 
     <ImageView
         android:id="@+id/ic_gocar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginStart="52dp"
+        android:layout_marginBottom="12dp"
         android:src="@drawable/ic_gocar"
         app:layout_constraintBottom_toBottomOf="@id/card_background"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,9 +43,10 @@
 
     <ImageView
         android:id="@+id/ic_gofood"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginEnd="52dp"
+        android:layout_marginBottom="12dp"
         android:src="@drawable/ic_gofood"
         app:layout_constraintBottom_toBottomOf="@id/card_background"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,24 +54,25 @@
 
     <ImageView
         android:id="@+id/ic_goride"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="12dp"
         android:src="@drawable/ic_goride"
         app:layout_constraintBottom_toBottomOf="@id/card_background"
         app:layout_constraintEnd_toStartOf="@id/ic_gofood"
         app:layout_constraintStart_toEndOf="@id/ic_gomart"
-        app:layout_constraintTop_toTopOf="@id/card_background"
-        />
+        app:layout_constraintTop_toTopOf="@id/card_background" />
 
     <ImageView
         android:id="@+id/ic_gomart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_marginStart="30dp"
+        android:layout_marginBottom="12dp"
         android:src="@drawable/ic_gomart"
         app:layout_constraintBottom_toBottomOf="@id/card_background"
-        app:layout_constraintStart_toEndOf="@id/ic_gocar"
         app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toEndOf="@id/ic_gocar"
         app:layout_constraintTop_toTopOf="@id/card_background" />
 
     <ImageView
@@ -131,7 +131,7 @@
         android:layout_marginTop="8dp"
         android:text="GoCar"
         android:textColor="@color/black"
-        android:textSize="14dp"
+        android:textSize="12sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="@id/ic_gocar"
         app:layout_constraintStart_toStartOf="@id/ic_gocar"
@@ -144,7 +144,7 @@
         android:text="GoMart"
         android:textColor="@color/black"
         android:layout_marginTop="8dp"
-        android:textSize="14dp"
+        android:textSize="12sp"
         android:textStyle="normal"
         app:layout_constraintTop_toBottomOf="@id/ic_gomart"
         app:layout_constraintStart_toStartOf="@id/ic_gomart"
@@ -159,7 +159,7 @@
         android:alpha="0"
         android:textColor="@color/black"
         android:layout_marginTop="8dp"
-        android:textSize="14dp"
+        android:textSize="12sp"
         android:textStyle="normal"
         app:layout_constraintTop_toBottomOf="@id/ic_gopulsa"
         app:layout_constraintStart_toStartOf="@id/ic_gopulsa"
@@ -173,7 +173,7 @@
         android:text="GoRide"
         android:textColor="@color/black"
         android:layout_marginTop="8dp"
-        android:textSize="14dp"
+        android:textSize="12sp"
         android:textStyle="normal"
         app:layout_constraintTop_toBottomOf="@id/ic_goride"
         app:layout_constraintStart_toStartOf="@id/ic_goride"
@@ -187,7 +187,7 @@
         android:text="GoFood"
         android:textColor="@color/black"
         android:layout_marginTop="8dp"
-        android:textSize="14dp"
+        android:textSize="12sp"
         android:textStyle="normal"
         app:layout_constraintTop_toBottomOf="@id/ic_gofood"
         app:layout_constraintStart_toStartOf="@id/ic_gofood"
