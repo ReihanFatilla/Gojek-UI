@@ -11,7 +11,6 @@ class ViewPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
 
     override fun getItemCount() = 3
 
-
     override fun createFragment(position: Int): Fragment {
         return when(position) {
             0 -> PromoFragment()
@@ -20,6 +19,5 @@ class ViewPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
             else -> HomeFragment()
         }
     }
-
 
 }
