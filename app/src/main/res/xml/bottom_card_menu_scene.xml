@@ -44,7 +44,6 @@
             android:layout_marginStart="-16dp"
             android:layout_marginEnd="-16dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="32dp"
             motion:layout_constraintStart_toStartOf="parent"
             android:id="@+id/card_background"
             motion:layout_constraintTop_toTopOf="parent"

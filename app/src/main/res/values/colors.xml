@@ -12,5 +12,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="vp_bg">#FFFFFFFF</color>
     <color name="app_bg">#4c1551</color>
+    <color name="tab_item_bg">#320b39</color>
 
 </resources>
