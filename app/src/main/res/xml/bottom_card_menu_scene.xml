@@ -9,17 +9,12 @@
         motion:duration="100"
         motion:motionInterpolator="bounce">
         <KeyFrameSet>
-            <KeyPosition
-                motion:motionTarget="@id/ic_gofood_2nd"
-                motion:framePosition="50"
-
-                />
         </KeyFrameSet>
         <OnSwipe
             motion:touchAnchorId="@+id/card_background"
             motion:dragDirection="dragUp"
-            motion:touchAnchorSide="top"
-            motion:maxAcceleration="15"
+            motion:onTouchUp="autoComplete"
+            motion:maxAcceleration="50.0"
             />
     </Transition>
 
@@ -170,7 +165,8 @@
             android:layout_height="40dp"
             motion:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
             android:alpha="1"
-            motion:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
+            motion:layout_constraintTop_toTopOf="@id/ic_gofood_2nd"
+            motion:transitionEasing="standard" />
         <Constraint
             android:id="@+id/ic_gomart_2nd"
             motion:layout_constraintEnd_toEndOf="parent"
