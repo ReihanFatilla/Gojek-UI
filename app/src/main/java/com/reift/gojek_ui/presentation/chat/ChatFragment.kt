@@ -9,24 +9,17 @@ import android.view.ViewGroup
 import com.reift.gojek_ui.R
 
 class ChatFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = ChatFragment()
-    }
-
     private lateinit var viewModel: ChatViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        viewModel = ViewModelProvider(this).get(ChatViewModel::class.java)
+
         return inflater.inflate(R.layout.fragment_chat, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ChatViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

@@ -10,23 +10,16 @@ import com.reift.gojek_ui.R
 
 class PromoFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = PromoFragment()
-    }
-
     private lateinit var viewModel: PromoViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_promo, container, false)
-    }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(PromoViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        return inflater.inflate(R.layout.fragment_promo, container, false)
     }
 
 }
