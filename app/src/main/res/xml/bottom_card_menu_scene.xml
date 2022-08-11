@@ -11,8 +11,9 @@
         <KeyFrameSet>
             <KeyPosition
                 motion:motionTarget="@id/ic_gofood_2nd"
-                motion:sizePercent="1"
-                motion:framePosition="50" />
+                motion:framePosition="50"
+
+                />
         </KeyFrameSet>
         <OnSwipe
             motion:touchAnchorId="@+id/card_background"
