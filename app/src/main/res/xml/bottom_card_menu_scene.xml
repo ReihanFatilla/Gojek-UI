@@ -6,14 +6,15 @@
     <Transition
         motion:constraintSetEnd="@+id/menuExpanded"
         motion:constraintSetStart="@id/menuCollapsed"
-        motion:duration="1000"
-        motion:motionInterpolator="anticipate">
+        motion:duration="100"
+        motion:motionInterpolator="bounce">
         <KeyFrameSet>
         </KeyFrameSet>
         <OnSwipe
             motion:touchAnchorId="@+id/card_background"
             motion:dragDirection="dragUp"
             motion:touchAnchorSide="top"
+            motion:maxAcceleration="15"
             />
     </Transition>
 
