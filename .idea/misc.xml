@@ -10,6 +10,9 @@
         <entry key="app/src/main/res/drawable/bg_tab_item.xml" value="0.2155" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/bottom_card_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.24954710144927536" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.24954710144927536" />
+        <entry key="app/src/main/res/layout/fragment_promo.xml" value="0.24954710144927536" />
       </map>
     </option>
   </component>
