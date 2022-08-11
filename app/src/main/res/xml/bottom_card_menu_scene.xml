@@ -14,7 +14,7 @@
             motion:touchAnchorId="@+id/card_background"
             motion:dragDirection="dragUp"
             motion:onTouchUp="autoComplete"
-            motion:maxAcceleration="50.0"
+            motion:maxAcceleration="75.0"
             />
     </Transition>
 
