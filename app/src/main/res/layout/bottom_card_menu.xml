@@ -224,21 +224,19 @@
         android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline_animation"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline_animation" />
 
     <ImageView
         android:id="@+id/ic_gofood_2nd"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="24dp"
         android:alpha="0"
         android:src="@drawable/ic_gocar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline_animation"
+        app:layout_constraintTop_toBottomOf="@id/tv_food_delivery_and_shopping"
+        app:layout_constraintStart_toStartOf="@id/ic_gocar"
+        app:layout_constraintEnd_toEndOf="@id/ic_gocar"
         />
 
     <ImageView
@@ -270,8 +268,8 @@
         android:alpha="0"
         android:src="@drawable/ic_goride"
         app:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ic_shadow_1"
+        app:layout_constraintStart_toEndOf="@id/ic_gomart_2nd"
         app:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
 
     <ImageView
@@ -281,9 +279,10 @@
         android:alpha="0"
         android:src="@drawable/ic_gomart"
         app:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
+        app:layout_constraintEnd_toStartOf="@id/ic_gomart_2nd"
+        app:layout_constraintStart_toEndOf="@id/ic_gofood_2nd"
+        app:layout_constraintTop_toTopOf="@id/ic_gofood_2nd"
+        />
 
     <TextView
         android:id="@+id/tv_gofood_2nd"
@@ -295,9 +294,9 @@
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ic_gofood_2nd" />
+        app:layout_constraintEnd_toEndOf="@id/ic_gofood_2nd"
+        app:layout_constraintTop_toBottomOf="@id/ic_gofood_2nd"
+        app:layout_constraintStart_toStartOf="@id/ic_gofood_2nd"/>
 
     <TextView
         android:id="@+id/tv_gomall"
@@ -309,8 +308,8 @@
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/ic_gomart_2nd"
+        app:layout_constraintEnd_toEndOf="@id/ic_gomart_2nd"
         app:layout_constraintTop_toBottomOf="@id/ic_gomall" />
 
     <TextView
@@ -328,7 +327,7 @@
         app:layout_constraintTop_toBottomOf="@id/ic_gomart_2nd" />
 
     <TextView
-        android:id="@+id/tv_shadow_1"
+        android:id="@+id/tv_goshop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -337,8 +336,7 @@
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ic_goshop"
+        app:layout_constraintStart_toStartOf="@id/ic_goshop"
         app:layout_constraintTop_toBottomOf="@id/ic_goshop" />
-
 </androidx.constraintlayout.motion.widget.MotionLayout>

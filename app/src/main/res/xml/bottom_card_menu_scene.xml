@@ -8,8 +8,7 @@
         motion:constraintSetStart="@id/menuCollapsed"
         motion:duration="100"
         motion:motionInterpolator="bounce">
-        <KeyFrameSet>
-        </KeyFrameSet>
+        <KeyFrameSet></KeyFrameSet>
         <OnSwipe
             motion:touchAnchorId="@+id/card_background"
             motion:dragDirection="dragUp"
@@ -155,7 +154,7 @@
             motion:layout_constraintTop_toBottomOf="@id/tv_layanan_lainnya"
             android:alpha="1"
             motion:layout_constraintStart_toStartOf="@id/tv_favorit"
-            android:layout_marginTop="12dp" />
+            android:layout_marginTop="6dp" />
         <Constraint
             android:id="@+id/ic_goshop"
             motion:layout_constraintEnd_toStartOf="@id/ic_shadow_1"
@@ -215,21 +214,29 @@
             android:id="@+id/ic_gofood_2nd"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            motion:layout_constraintTop_toBottomOf="@id/tv_food_delivery_and_shopping"
             android:alpha="1"
+            motion:layout_constraintTop_toBottomOf="@id/tv_food_delivery_and_shopping"
             motion:layout_constraintStart_toStartOf="@id/tv_food_delivery_and_shopping"
-            android:layout_marginTop="24dp" />
+            android:layout_marginTop="16dp" />
         <Constraint
             android:id="@+id/tv_gofood_2nd"
-            motion:layout_constraintEnd_toEndOf="@id/ic_gofood_2nd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="@id/ic_gofood_2nd"
             motion:layout_constraintTop_toBottomOf="@id/ic_gofood_2nd"
-            android:alpha="1"
             motion:layout_constraintStart_toStartOf="@id/ic_gofood_2nd"
+            android:alpha="1"
+            android:layout_marginTop="8dp"
+            />
+        <Constraint
+            android:id="@+id/tv_goshop"
+            motion:layout_constraintEnd_toEndOf="@id/ic_goshop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/ic_goshop"
+            android:alpha="1"
+            motion:layout_constraintStart_toStartOf="@id/ic_goshop"
             android:layout_marginTop="8dp" />
-
-
     </ConstraintSet>
 </MotionScene>
 
