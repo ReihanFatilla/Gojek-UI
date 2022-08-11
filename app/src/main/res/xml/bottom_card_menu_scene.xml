@@ -8,8 +8,8 @@
         motion:constraintSetStart="@id/menuCollapsed"
         motion:duration="1000"
         motion:motionInterpolator="anticipate">
-       <KeyFrameSet>
-       </KeyFrameSet>
+        <KeyFrameSet>
+        </KeyFrameSet>
         <OnSwipe
             motion:touchAnchorId="@+id/card_background"
             motion:dragDirection="dragUp"
@@ -63,7 +63,7 @@
             motion:layout_constraintTop_toTopOf="@id/card_background"
             motion:layout_constraintStart_toStartOf="@id/ic_gocar"
             android:layout_marginTop="42dp"
-            motion:transitionEasing="linear"
+            motion:transitionEasing="cubic(1,0,0.8,0.8)"
             motion:pathMotionArc="none" />
         <Constraint
             android:id="@+id/ic_gocar"
@@ -157,14 +157,25 @@
             android:layout_marginTop="12dp" />
         <Constraint
             android:id="@+id/ic_goshop"
-            motion:layout_constraintEnd_toEndOf="@id/ic_gofood"
+            motion:layout_constraintEnd_toStartOf="@id/ic_shadow_1"
+            motion:layout_constraintStart_toEndOf="@id/ic_gomart_2nd"
             android:layout_width="40dp"
             android:layout_height="40dp"
             motion:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
             android:alpha="1"
             motion:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
         <Constraint
-            android:id="@+id/tv_goshop"
+            android:id="@+id/ic_gomart_2nd"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            motion:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
+            android:layout_marginEnd="16dp"
+            android:alpha="1"
+            motion:layout_constraintTop_toTopOf="@id/ic_gofood_2nd"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/tv_shadow_1"
             motion:layout_constraintEnd_toEndOf="@id/ic_goshop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -172,16 +183,6 @@
             android:alpha="1"
             motion:layout_constraintStart_toStartOf="@id/ic_goshop"
             android:layout_marginTop="8dp" />
-        <Constraint
-            android:id="@+id/ic_gomart_2nd"
-            motion:layout_constraintEnd_toStartOf="@id/ic_gofood"
-            motion:layout_constraintStart_toEndOf="@id/guideline"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            motion:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
-            android:layout_marginEnd="16dp"
-            android:alpha="1"
-            motion:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
         <Constraint
             android:id="@+id/tv_gomart_2nd"
             motion:layout_constraintEnd_toEndOf="@id/ic_gomart_2nd"
@@ -193,13 +194,12 @@
             android:layout_marginTop="8dp" />
         <Constraint
             android:id="@+id/ic_gomall"
-            motion:layout_constraintEnd_toStartOf="@id/guideline"
+            motion:layout_constraintEnd_toStartOf="@id/ic_gomart_2nd"
             motion:layout_constraintStart_toEndOf="@id/ic_gocar"
             android:layout_width="40dp"
             android:layout_height="40dp"
             motion:layout_constraintBottom_toBottomOf="@id/ic_gofood_2nd"
             android:alpha="1"
-            android:layout_marginStart="16dp"
             motion:layout_constraintTop_toTopOf="@id/ic_gofood_2nd" />
         <Constraint
             android:id="@+id/tv_gomall"
@@ -217,7 +217,7 @@
             motion:layout_constraintTop_toBottomOf="@id/tv_food_delivery_and_shopping"
             android:alpha="1"
             motion:layout_constraintStart_toStartOf="@id/tv_food_delivery_and_shopping"
-            android:layout_marginTop="32dp" />
+            android:layout_marginTop="24dp" />
         <Constraint
             android:id="@+id/tv_gofood_2nd"
             motion:layout_constraintEnd_toEndOf="@id/ic_gofood_2nd"
