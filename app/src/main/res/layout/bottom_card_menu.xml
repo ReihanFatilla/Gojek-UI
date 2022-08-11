@@ -206,12 +206,11 @@
         android:layout_marginTop="24dp"
         android:alpha="0"
         android:text="Layanan Lainnya"
+        app:layout_constraintTop_toBottomOf="@id/tv_gocar"
+        app:layout_constraintStart_toStartOf="@id/ic_gocar"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline_animation"
         />
 
     <TextView
@@ -224,9 +223,9 @@
         android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline_animation" />
+        app:layout_constraintTop_toBottomOf="@id/tv_layanan_lainnya"
+        app:layout_constraintStart_toStartOf="@id/tv_favorit"
+        />
 
     <ImageView
         android:id="@+id/ic_gofood_2nd"
@@ -234,10 +233,9 @@
         android:layout_height="40dp"
         android:alpha="0"
         android:src="@drawable/ic_gocar"
-        app:layout_constraintTop_toBottomOf="@id/tv_food_delivery_and_shopping"
-        app:layout_constraintStart_toStartOf="@id/ic_gocar"
         app:layout_constraintEnd_toEndOf="@id/ic_gocar"
-        />
+        app:layout_constraintStart_toStartOf="@id/ic_gocar"
+        app:layout_constraintTop_toBottomOf="@id/tv_food_delivery_and_shopping" />
 
     <ImageView
         android:id="@+id/ic_shadow_1"
@@ -308,8 +306,8 @@
         android:textColor="@color/black"
         android:textSize="12sp"
         android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@id/ic_gomart_2nd"
-        app:layout_constraintEnd_toEndOf="@id/ic_gomart_2nd"
+        app:layout_constraintEnd_toEndOf="@id/ic_gomall"
+        app:layout_constraintStart_toStartOf="@id/ic_gomall"
         app:layout_constraintTop_toBottomOf="@id/ic_gomall" />
 
     <TextView
